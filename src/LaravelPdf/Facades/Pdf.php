@@ -1,6 +1,6 @@
 <?php
 
-namespace niklasravnsborg\LaravelPdf\Facades;
+namespace PravoDev\LaravelPdf\Facades;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 

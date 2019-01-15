@@ -1,6 +1,6 @@
 <?php
 
-namespace niklasravnsborg\LaravelPdf;
+namespace PravoDev\LaravelPdf;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;

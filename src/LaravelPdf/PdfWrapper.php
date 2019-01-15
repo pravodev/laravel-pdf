@@ -1,11 +1,17 @@
 <?php
 
-namespace niklasravnsborg\LaravelPdf;
+namespace PravoDev\LaravelPdf;
 
 use File;
 use View;
 
 class PdfWrapper {
+	/**
+	 * Config mPDF
+	 * 
+	 * @author pravodev
+	 */
+	protected $config = [];
 
 	/**
 	 * Load a HTML string
@@ -42,4 +48,18 @@ class PdfWrapper {
 		return new Pdf(View::make($view, $data, $mergeData)->render(), $config);
 	}
 
+	/**
+	 * Set paper
+	 * 
+	 * @author pravodev
+	 * @param string $format
+	 * @param string $orientation
+	 */
+	public function setPaper($format = 'A4', $orientation = 'P')
+	{
+		$this->config['format'] = $format;
+		$this->config['orientation'] = $orientation;
+		
+		return $this;
+	}
 }
